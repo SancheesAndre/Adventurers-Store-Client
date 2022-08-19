@@ -1,0 +1,37 @@
+.item {
+    font-weight: 900;
+    font-family: "Orbitron";
+    margin: 15px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+    width: 240px;
+    height: 340px;
+    padding: 8px;
+}
+
+.itemImg {
+    margin: 40px 68px;
+    width: 96px;
+}
+
+.item h1 {
+    font-size: 28px;
+    font-family: "Henny Penny";
+    text-align: center;
+}
+
+.item p {
+    text-align: center;
+}
+
+.priceBox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item button {
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    border: none;
+}

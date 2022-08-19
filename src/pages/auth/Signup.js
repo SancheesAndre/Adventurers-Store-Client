@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Header from "../../components/Header";
 import apiService from "../../services/api.service";
+import './Signup.css'
 
 function Signup(props) {
   const [state, setState] = useState({ name: "", password: "", email: "" });
@@ -33,15 +35,18 @@ function Signup(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div>
+      <Header />
+      <form onSubmit={handleSubmit} className="SignupForm">
       <h1>Signup!</h1>
 
       <div>
-        <label htmlFor="signupFormName">Name</label>
+        <label htmlFor="signupFormName"></label>
         <input
           type="text"
           name="name"
           id="signupFormName"
+          placeholder="Username"
           value={state.name}
           error={errors.name}
           onChange={handleChange}
@@ -49,11 +54,12 @@ function Signup(props) {
       </div>
 
       <div>
-        <label htmlFor="signupFormEmail">E-mail Address</label>
+        <label htmlFor="signupFormEmail"></label>
         <input
           type="email"
           name="email"
           id="signupFormEmail"
+          placeholder="e-mail"
           value={state.email}
           error={errors.email}
           onChange={handleChange}
@@ -61,11 +67,12 @@ function Signup(props) {
       </div>
 
       <div>
-        <label htmlFor="signupFormPassword">Password</label>
+        <label htmlFor="signupFormPassword"></label>
         <input
           type="password"
           name="password"
           id="signupFormPassword"
+          placeholder="password"
           value={state.password}
           error={errors.password}
           onChange={handleChange}
@@ -73,13 +80,14 @@ function Signup(props) {
       </div>
 
       <div>
-        <button type="submit">Signup!</button>
-
-        <Link to="/auth/login">
-          Already have an account? Click here to login.
+        <button type="submit">→</button>
+        <p>Already have an account?</p>
+        <Link className="SignupLink" to="/auth/login">
+          Click here to login.
         </Link>
       </div>
     </form>
+    </div>
   );
 }
 

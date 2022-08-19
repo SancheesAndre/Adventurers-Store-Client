@@ -1,0 +1,44 @@
+nav {
+    background-color: #D4AF37;
+    width: 100%;
+    padding: 20px 40px 0px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.logo {
+    font-family: 'Henny Penny';
+    color: #303030;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+ul  {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+ul a {
+    font-family: 'Orbitron';
+    color: #303030;
+}
+
+li {
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    display: flex;
+    padding: 4px 18px;
+    margin: 0 10px;
+    font-weight: 500;
+}

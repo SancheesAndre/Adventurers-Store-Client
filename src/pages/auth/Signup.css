@@ -1,0 +1,56 @@
+.SignupForm {
+    font-family: 'Orbitron';
+    text-align: center;
+    margin: 80px auto;
+    background-color: #D9D9D9;
+    padding: 10px;
+    border-radius: 20px;
+    width: 350px;
+    height: 450px;
+}
+
+.SignupForm h1 {
+    font-size: 2vw;
+    font-weight: bold;
+    margin: 20px 0 60px 0;
+}
+
+.SignupForm ::placeholder {
+    font-family: 'Orbitron';
+    text-align: center; 
+}
+
+.SignupForm input {
+    height: 40px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.SignupForm button {
+    margin: 14px auto;
+    font-size: 2vw;
+    color: #909090;
+    text-align: center;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+}
+
+.SignupForm p {
+    font-size: 1vw;
+    margin: 0;
+}
+
+.SignupLink {
+    color: #909090;    
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import apiService from "../../services/api.service";
+import './Login.css'
 
 import { AuthContext } from "../../contexts/authContext";
 
@@ -35,7 +36,7 @@ function Login(props) {
         JSON.stringify({ ...response.data })
       );
       setErrors({ password: "", email: "" });
-      navigate("/book/all");
+      navigate("/test");
     } catch (err) {
       console.error(err);
       setErrors({ ...err.response.data.errors });
@@ -43,41 +44,44 @@ function Login(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Login</h1>
+    <div>
+      <form onSubmit={handleSubmit} className="SignForm">
+        <h1>Sign in</h1>
 
-      <div>
-        <label htmlFor="signupFormEmail">E-mail Address</label>
-        <input
-          type="email"
-          name="email"
-          id="signupFormEmail"
-          value={state.email}
-          error={errors.email}
-          onChange={handleChange}
-        />
-      </div>
+        <div>
+          <label htmlFor="signupFormEmail"></label>
+          <input
+            type="email"
+            name="email"
+            id="signupFormEmail"
+            placeholder="e-mail"
+            value={state.email}
+            error={errors.email}
+            onChange={handleChange}
+          />
+        </div>
 
-      <div>
-        <label htmlFor="signupFormPassword">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="signupFormPassword"
-          value={state.password}
-          error={errors.password}
-          onChange={handleChange}
-        />
-      </div>
+        <div>
+          <label htmlFor="signupFormPassword" placeholder="Password"></label>
+          <input
+            type="password"
+            name="password"
+            id="signupFormPassword"
+            placeholder="password"
+            value={state.password}
+            error={errors.password}
+            onChange={handleChange}
+          />
+        </div>
 
-      <div>
-        <button type="submit">Login!</button>
+        <div>
+          <button type="submit">→</button>
+          <p>Can't sign in? </p>
+          <Link className="signupLink" to="/auth/signup">Create an Account</Link>
 
-        <Link to="/auth/signup">
-          Don't have an account? Click here to signup!
-        </Link>
-      </div>
-    </form>
+        </div>
+      </form>
+    </div>
   );
 }
 

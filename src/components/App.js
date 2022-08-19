@@ -6,7 +6,7 @@ import Home from "../pages/Home";
 import Signup from '../pages/auth/Signup'
 import Login from '../pages/auth/Login'
 import PrivateRoute from '../pages/auth/PrivateRoute'
-import PrivatePage from "../pages/PrivatePage";
+import StorePage from "../pages/StorePage";
 import { AuthContextComponent } from "../contexts/authContext";
 
 
@@ -20,9 +20,9 @@ function App() {
             <Route path='signup' element={<Signup />} />
             <Route path='login' element={<Login />} />
           </Route>
-          <Route path='/test' element={
+          <Route path='/StorePage' element={
             <PrivateRoute>
-              <PrivatePage />
+              <StorePage />
             </PrivateRoute>
           } />
         </Routes>
