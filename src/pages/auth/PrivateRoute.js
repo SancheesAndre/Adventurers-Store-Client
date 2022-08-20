@@ -13,7 +13,7 @@ function PrivateRoute({ children }) {
   if(!authContext.loggedInUser.user._id) {
     return (
       <Navigate
-        to="/auth/login"
+        to="/"
       />
     )
   }

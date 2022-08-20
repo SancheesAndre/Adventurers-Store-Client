@@ -8,6 +8,7 @@ import Login from '../pages/auth/Login'
 import PrivateRoute from '../pages/auth/PrivateRoute'
 import StorePage from "../pages/StorePage";
 import { AuthContextComponent } from "../contexts/authContext";
+import BackpackPage from "../pages/BackpackPage";
 
 
 function App() {
@@ -23,6 +24,11 @@ function App() {
           <Route path='/StorePage' element={
             <PrivateRoute>
               <StorePage />
+            </PrivateRoute>
+          } />
+          <Route path='/BackpackPage' element={
+            <PrivateRoute>
+              <BackpackPage />
             </PrivateRoute>
           } />
         </Routes>

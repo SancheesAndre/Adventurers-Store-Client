@@ -14,13 +14,12 @@ const Header = () => {
                         <Link to={'/storepage'}>Store</Link>
                     </li>
                     <li>
-                        <Link to={'/backpack'}>Backpack</Link>
+                        <Link to={'/backpackpage'}>Backpack</Link>
                     </li>
                     <li>
                         <Link to={'/signout'}>Sign out</Link>
                     </li>
                 </ul>
-
             </div>
 
         </nav>

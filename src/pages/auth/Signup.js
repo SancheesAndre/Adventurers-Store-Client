@@ -82,7 +82,7 @@ function Signup(props) {
       <div>
         <button type="submit">→</button>
         <p>Already have an account?</p>
-        <Link className="SignupLink" to="/auth/login">
+        <Link className="SignupLink" to="/">
           Click here to login.
         </Link>
       </div>

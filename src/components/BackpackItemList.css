@@ -1,0 +1,4 @@
+.ItemsList {
+    display: flex;
+    justify-content: space-around;
+}

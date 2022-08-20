@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios'
 import { useState, useEffect } from 'react';
-import ItemsList from '../components/ItemsList';
 import './StorePage.css'
+import ItemsList from '../components/ItemsList';
 import Header from '../components/Header';
 
 const StorePage = () => {
