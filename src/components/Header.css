@@ -8,14 +8,11 @@ nav {
     
 }
 
-a:link {
-    text-decoration: none;
-}
-
 .logo {
     font-family: 'Henny Penny';
     color: #303030;
 }
+
 
 .menu {
     display: flex;
@@ -41,4 +38,14 @@ li {
     padding: 4px 18px;
     margin: 0 10px;
     font-weight: 500;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.logoutButton {
+    font-family: 'Orbitron';
+    border: none;
+    background-color: #D9D9D9;
 }

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import './StorePage.css'
 import ItemsList from '../components/ItemsList';
 import Header from '../components/Header';
+//import SearchBar from "../components/SearchBar"
 
 const StorePage = () => {
     const [items, setItems] = useState([])
@@ -15,12 +16,16 @@ const StorePage = () => {
             })
             .catch(error => console.log(error))
     }, [])
+    
+    
+    
 
     return (
         <div>
             <div>
                 <Header />
             </div>
+            
             <div>
                 <div className='ItemsList'>
                     <ItemsList items={items} />

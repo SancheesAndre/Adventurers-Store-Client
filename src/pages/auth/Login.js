@@ -4,15 +4,18 @@ import apiService from "../../services/api.service";
 import './Login.css'
 
 import { AuthContext } from "../../contexts/authContext";
+import MessageBox from "../../components/MessageBox";
 
 function Login(props) {
-  const authContext = useContext(AuthContext);
-
   const [state, setState] = useState({ password: "", email: "" });
   const [errors, setErrors] = useState({
     email: null,
     password: null,
   });
+
+  const authContext = useContext(AuthContext);
+
+  const message = 'Welcome to the Adverturer’s Store, traveler. Login or create one account to trade and buy itens from other adventurers around the world!'
 
   const navigate = useNavigate();
 
@@ -36,7 +39,7 @@ function Login(props) {
         JSON.stringify({ ...response.data })
       );
       setErrors({ password: "", email: "" });
-      navigate("/test");
+      navigate("/storepage");
     } catch (err) {
       console.error(err);
       setErrors({ ...err.response.data.errors });
@@ -81,6 +84,7 @@ function Login(props) {
 
         </div>
       </form>
+      <MessageBox message={message} />
     </div>
   );
 }
