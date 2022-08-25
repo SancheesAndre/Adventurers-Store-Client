@@ -21,10 +21,14 @@
 }
 
 .SignForm input {
+    font-family: 'Orbitron';
     height: 40px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .SignForm button {
@@ -58,3 +62,4 @@ a:link {
 a:hover {
     color: white;
 }
+

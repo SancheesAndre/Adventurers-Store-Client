@@ -25,13 +25,11 @@ const StorePage = () => {
             </div>
             <div className='container'>
                 <div>
-                    <div className='ItemsList'>
-                        <ItemsList items={items} />
-                    </div>
+                    <ItemsList items={items} />
                 </div>
-                <div>
-                </div>
-                    {<CharacterInfo />}
+                
+                    <CharacterInfo />
+                
             </div>
 
         </div>
