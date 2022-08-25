@@ -1,4 +1,13 @@
 .ItemsList {
+    width: 100%;
+    margin: 20px 0;
     display: flex;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    
+    
+}
+
+.itemCard {
+    width: 28%;
+    
 }

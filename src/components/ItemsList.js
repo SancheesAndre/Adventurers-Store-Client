@@ -6,21 +6,28 @@ const ItemsList = (props) => {
     const { items } = props
 
     return (
+
         <div className="ItemsList">
-            
-                    {
-                        items.map(item => {
-                            return <ItemCard
-                                key={item._id}
+            {
+                items.map(item => {
+                    return (
+                        <div className="itemCard" key={item._id}>
+                            <ItemCard
                                 id={item._id}
                                 name={item.name}
                                 image={item.image}
                                 price={item.price}
                                 description={item.description}
                             />
-                        })
-                    }
+                        </div>
+                    )
+                })
+            }
         </div>
+
+
+
+
     )
 }
 

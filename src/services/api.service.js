@@ -29,6 +29,21 @@ class ApiService {
   async login(user) {
     return await this.api.post("/login", user);
   }
+
+  async backpack() {
+    const res = await this.api.get("/backpack")
+    return res.data
+  }
+
+  async getItems() {
+    const res = await this.api.get("/items")
+    return res.data 
+  }
+
+  async getCharInfo() {
+    const res = await this.api.get("/profile")
+    return res.data 
+  }
 }
 
 export default new ApiService();

@@ -45,10 +45,7 @@ const Header = () => {
                     <h1 className="logo">Adventurer's Store</h1>
 
                     <div className='menu'>
-                        <ul>
-                            <li>
-                                <Link to={'/storepage'}>Store</Link>
-                            </li>
+                        <ul> 
                             <li>
                                 <Link to={'/'}>Login</Link>
                             </li>
