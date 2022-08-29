@@ -1,5 +1,5 @@
 #### [(clique aqui para ver o projeto)](https://adventurersstore.netlify.app/)
-![image](https://user-images.githubusercontent.com/55901671/187258929-14c1a1ae-e6dd-4157-b919-c2c4896575a6.png)
+![image](https://user-images.githubusercontent.com/55901671/187266509-007cc673-12a5-4a98-a26a-e63fef1066ee.png)
 
  ![image](https://user-images.githubusercontent.com/55901671/187258762-196888ed-02d3-462b-b8e5-9cce53cd8046.png)
 
