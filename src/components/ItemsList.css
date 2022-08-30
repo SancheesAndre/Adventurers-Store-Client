@@ -1,12 +1,11 @@
 .ItemsList {
+    min-width: 990px;
     width: 100%;
-    margin: 20px 0;
+    margin: 20px;
     display: flex;
-    flex-flow: row wrap;
-    
-    
+    flex-flow: row wrap;    
 }
 
 .itemCard {
-    width: 28%;
+    width: 24%;
 }

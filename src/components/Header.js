@@ -13,7 +13,28 @@ const Header = () => {
         document.location.reload(true)
     }
 
-    if (authContext.loggedInUser.user._id) {
+    if (!authContext.loggedInUser.user._id) {
+        return (
+            <div>
+                <nav>
+
+                    <h1 className="logo">Adventurer's Store</h1>
+
+                    <div className='menu'>
+                        <ul> 
+                            <li>
+                                <Link to={'/'}>Login</Link>
+                            </li>
+                            <li>
+                                <Link to={'/auth/signup'}>Register</Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                </nav>
+            </div>
+        )
+    } if (authContext.loggedInUser.user._id){
         return (
             <div>
                 <nav>
@@ -29,28 +50,10 @@ const Header = () => {
                                 <Link to={'/backpackpage'}>Backpack</Link>
                             </li>
                             <li>
-                                <button className="logoutButton" onClick={clearStorage}>logout</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                </nav>
-            </div>
-        )
-    } else {
-        return (
-            <div>
-                <nav>
-
-                    <h1 className="logo">Adventurer's Store</h1>
-
-                    <div className='menu'>
-                        <ul> 
-                            <li>
-                                <Link to={'/'}>Login</Link>
+                                <Link to={'/purchasecoinpage'}>Buy Gold</Link>
                             </li>
                             <li>
-                                <Link to={'/auth/signup'}>Register</Link>
+                                <button className="logoutButton" onClick={clearStorage}>Logout</button>
                             </li>
                         </ul>
                     </div>

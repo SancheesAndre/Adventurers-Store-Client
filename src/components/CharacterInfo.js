@@ -10,13 +10,11 @@ const CharacterInfo = () => {
         const fetchCharInfo = async () => {
             const charData = await apiService.getCharInfo()
             setUserInfo(charData)
-            console.log(userInfo.name)
         }
         fetchCharInfo()
         
     }, [])
 
-    console.log(userInfo)
     return (
         <div className='CharInfo'>
             <h1>{userInfo.name}</h1>
@@ -24,6 +22,8 @@ const CharacterInfo = () => {
             <h1>{userInfo.healthPoints}</h1>
             <h1>{userInfo.staminaPoints}</h1>
             <h2>{userInfo.experiencePoints}</h2>
+            <h2>{userInfo.userMoney}</h2>
+                    
         </div>
     )
 }

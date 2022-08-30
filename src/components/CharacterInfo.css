@@ -1,5 +1,8 @@
 .CharInfo {
+    margin: 0 25px;
     padding: 0 20px;
     background-color: #D9D9D9;
-    width: 40%;
+    min-width: 24%;
+    min-height: 800px;
+    
 }

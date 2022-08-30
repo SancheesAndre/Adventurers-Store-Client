@@ -9,6 +9,8 @@ import apiService from '../services/api.service';
 
 const StorePage = () => {
     const [items, setItems] = useState([])
+    const operation = "Buy"
+    
 
     useEffect(() => {
         const fetchItems = async () => {
@@ -24,12 +26,10 @@ const StorePage = () => {
                 <Header />
             </div>
             <div className='container'>
-                <div>
-                    <ItemsList items={items} />
-                </div>
-                
-                    <CharacterInfo />
-                
+
+                <ItemsList  operation={operation} items={items} />
+                <CharacterInfo />
+
             </div>
 
         </div>

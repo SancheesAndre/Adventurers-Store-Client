@@ -10,8 +10,8 @@
 }
 
 .itemImg {
-    margin: 40px 68px;
-    width: 96px;
+    margin: 20px 50px;
+    width: 100px;
 }
 
 .item h1 {
@@ -30,8 +30,18 @@
 }
 
 .item button {
+    font-family: 'Orbitron';
     font-weight: bold;
     border-radius: 5px;
     background-color: #D9D9D9;
     border: none;
+}
+
+.item button:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.coinImg {
+    width: 50px;
 }

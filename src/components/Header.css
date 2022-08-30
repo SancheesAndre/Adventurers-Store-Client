@@ -63,3 +63,8 @@ li:hover {
     font-size: larger;
     font-weight: 600;
 }
+
+.logoutButton:hover {
+    cursor: pointer;
+    color: white;
+}

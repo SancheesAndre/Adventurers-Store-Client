@@ -4,9 +4,11 @@ import './BackpackPage.css'
 import ItemsList from "../components/ItemsList"
 import Header from "../components/Header"
 import apiService from '../services/api.service';
+import CharacterInfo from '../components/CharacterInfo';
 
 const BackpackPage = () => {
     const [items, setItems] = useState([])
+    const operation = "Sell"
 
     useEffect(() => {
         const fetchBackpack = async () => {
@@ -15,17 +17,19 @@ const BackpackPage = () => {
         }
         fetchBackpack()
     }, [])
-    
+
     return (
         <div>
             <div>
                 <Header />
             </div>
-            <div>
-                <div className='ItemsList'>
-                    <ItemsList items={items} />
+            <div className='container'>
+                <div>
+                    <ItemsList operation={operation} items={items} />
                 </div>
+                <CharacterInfo />
             </div>
+
         </div>
     )
 }
