@@ -1,8 +1,49 @@
 .CharInfo {
-    margin: 0 25px;
-    padding: 0 20px;
+    padding: 0 32px;
     background-color: #D9D9D9;
     min-width: 24%;
     min-height: 800px;
+}
+
+.profilePic {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 120px;
+    border-radius: 20px;
+}
+
+.charInfoBox {
+    padding: 6px;
+    font-family: 'Orbitron';
+    font-size: 12px;
+    text-align: center;
+    margin: 20px;
+    line-height: 12px;
+    display: block;
     
+}
+
+.userName {
+    font-family: 'Henny Penny';
+}
+
+.hpBar {
+    margin: 4px 20px;
+    background-color: #880808;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.mpBar {
+    margin: 0 20px;
+    background-color: #2029a7;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.goldCoins {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

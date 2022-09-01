@@ -10,8 +10,11 @@
 }
 
 .itemImg {
-    margin: 20px 50px;
+    margin: 20px 46px;
     width: 100px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #D4AF37;
 }
 
 .item h1 {

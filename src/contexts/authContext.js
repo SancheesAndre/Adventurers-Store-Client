@@ -5,6 +5,7 @@ const AuthContext = createContext();
 function AuthContextComponent(props) {
   const [loggedInUser, setLoggedInUser] = useState({ token: "", user: {} });
   const [isLoading, setIsLoading] = useState(true)
+  const [update, setUpdate] = useState(true)
 
   useEffect(() => {
     const storedUser = localStorage.getItem("loggedInUser");
@@ -19,7 +20,7 @@ function AuthContextComponent(props) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ isLoading,loggedInUser, setLoggedInUser }}>
+    <AuthContext.Provider value={{ isLoading, loggedInUser, setLoggedInUser, update, setUpdate }}>
       {props.children}
     </AuthContext.Provider>
   );

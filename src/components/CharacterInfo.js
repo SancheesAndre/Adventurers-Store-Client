@@ -1,10 +1,14 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useContext, useEffect } from "react";
+import { AuthContext } from "../contexts/authContext";
+import BackpackPage from "../pages/BackpackPage";
 import apiService from '../services/api.service';
 import './CharacterInfo.css'
+import ItemsList from "./ItemsList";
 
-const CharacterInfo = () => {
+
+const CharacterInfo = (props) => {
     const [userInfo, setUserInfo] = useState([])
+    const { update } = useContext(AuthContext);
 
     useEffect(() => {
         const fetchCharInfo = async () => {
@@ -12,18 +16,19 @@ const CharacterInfo = () => {
             setUserInfo(charData)
         }
         fetchCharInfo()
-        
-    }, [])
+    }, [update])
 
     return (
         <div className='CharInfo'>
-            <h1>{userInfo.name}</h1>
-            <img src={userInfo.profilePicture} alt="" />
-            <h1>{userInfo.healthPoints}</h1>
-            <h1>{userInfo.staminaPoints}</h1>
-            <h2>{userInfo.experiencePoints}</h2>
-            <h2>{userInfo.userMoney}</h2>
-                    
+            <div className="charInfoBox">
+            <img className="profilePic" src={userInfo.profilePicture} alt="User" />
+                <h1 className="userName">{userInfo.name}</h1>
+                <h1 className="hpBar">HP: {userInfo.healthPoints} / {userInfo.healthPoints}</h1>
+                <h1 className="mpBar">MP: {userInfo.staminaPoints} / {userInfo.staminaPoints}</h1>
+                <h2>EXP: {userInfo.experiencePoints} / 200</h2>
+                <h2 className="goldCoins">Gold: {userInfo.userMoney} <img src="https://res.cloudinary.com/sanxcloud/image/upload/v1661995416/profilePictures/pngegg_u3nfhq.png" alt="coins" /></h2>
+            </div>
+           
         </div>
     )
 }

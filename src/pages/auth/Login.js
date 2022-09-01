@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import apiService from "../../services/api.service";
 import './Login.css'
-
+import Swal from 'sweetalert2'
 import { AuthContext } from "../../contexts/authContext";
 import MessageBox from "../../components/MessageBox";
 
@@ -18,6 +18,25 @@ function Login(props) {
   const message = 'Welcome to the Adverturer’s Store, traveler. Login or create one account to trade and buy itens from other adventurers around the world!'
 
   const navigate = useNavigate();
+
+  function confirmLogin() {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'bottom-end',
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+
+    Toast.fire({
+      icon: 'success',
+      title: 'Signed in successfully'
+    })
+  }
 
   function handleChange(event) {
     setState({
@@ -39,6 +58,7 @@ function Login(props) {
         JSON.stringify({ ...response.data })
       );
       setErrors({ password: "", email: "" });
+      confirmLogin()
       navigate("/storepage");
     } catch (err) {
       console.error(err);
