@@ -50,7 +50,7 @@ const Header = () => {
                                 <Link to={'/backpackpage'}>Backpack</Link>
                             </li>
                             <li>
-                                <Link to={'/purchasecoinpage'}>Buy Gold</Link>
+                                <Link to={'/purchasecoinpage'}>Claim Gold</Link>
                             </li>
                             <li>
                                 <button className="logoutButton" onClick={clearStorage}>Logout</button>

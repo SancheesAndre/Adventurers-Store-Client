@@ -64,6 +64,11 @@ class ApiService {
     const res = await this.api.patch(`/sell/${id}`)
     return res.data
   }
+
+  async addRiddleGold() {
+    const res = await this.api.patch(`/addRiddleGold`)
+    return res.data
+  }
 }
 
 export default new ApiService();

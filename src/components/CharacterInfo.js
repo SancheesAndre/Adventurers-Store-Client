@@ -1,9 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../contexts/authContext";
-import BackpackPage from "../pages/BackpackPage";
 import apiService from '../services/api.service';
 import './CharacterInfo.css'
-import ItemsList from "./ItemsList";
+
 
 
 const CharacterInfo = (props) => {
